@@ -9,7 +9,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features ="./src/test/resources/rewards_platform/features",
 		glue="rewards_platform.step_definitions",
-		tags="@id_Test"
+		tags="@QMPAnewFile"
 		//dryRun = true
 		)
 

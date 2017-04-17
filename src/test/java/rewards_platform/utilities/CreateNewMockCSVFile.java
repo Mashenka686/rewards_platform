@@ -18,7 +18,7 @@ public class CreateNewMockCSVFile {
 
 	 private static FileWriter fileWriter;
 	 
-	 void createMockModelQMPA(List<String> header, String fileName, int numberOfRows){
+	 public void createMockModelQMPA(List<String> header, String fileName, int numberOfRows){
 		try {
 			QMPA = new ArrayList<QMPAModelToCreate>();
 
