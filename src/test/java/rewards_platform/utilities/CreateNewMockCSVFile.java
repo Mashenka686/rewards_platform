@@ -39,7 +39,7 @@ public class CreateNewMockCSVFile {
 			}
 			for (int i = 0; i < numberOfRows; i++) {
 				QMPA.add(new QMPAModelToCreate(QMAD.get(i).getQMAD_ACCT()));
-				QMXR.add(new QMXRModelToCreate());
+				QMXR.add(new QMXRModelToCreate(QMAD.get(i).getQMAD_PRIMARY_CMS_ACCT()));
 			
 			}
 			
@@ -110,11 +110,4 @@ public class CreateNewMockCSVFile {
 				e.printStackTrace();
 			}
 		}
-
-	public static void main(String[] args) {
-			
-		CreateNewMockCSVFile create = new CreateNewMockCSVFile(10, "TestData02");
-		
-		
-	}
 }

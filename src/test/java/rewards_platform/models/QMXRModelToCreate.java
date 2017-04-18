@@ -36,7 +36,7 @@ public class QMXRModelToCreate {
 	}
 
 	
-	public QMXRModelToCreate() {
+	public QMXRModelToCreate(String string) {
 		
 		setQMXR_RECORD(newId());
 		setQMXR_KEY(newId());
@@ -44,7 +44,7 @@ public class QMXRModelToCreate {
 		setQMXR_KEY_CMS_REDEFINES_QMXR_AR_KEY(newId());
 		setQMXR_SOURCE(newId());
 		setQMXR_CMS_ORG(newId());
-		setQMXR_CMS_ACCT_NBR(newId());
+		setQMXR_CMS_ACCT_NBR(string);
 		setFILLER5(newId());
 		setQMXR_LMS_KEY(newId());
 		setQMXR_ORG(newId());
