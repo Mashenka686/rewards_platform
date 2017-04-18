@@ -1,9 +1,8 @@
 package rewards_platform.models;
 
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
+
 
 public class QMPAModelToCreate {
 	
@@ -151,33 +150,33 @@ public class QMPAModelToCreate {
 			setQMPA_ACTV_NEXT_DATE(newId());
 			setQMPA_CTD(newId());
 		    setFILLER_REDEFINES_QMPA_CTD(newId());
-		    setQMPA_CTD_PTS_EARNED(newId());
-		    setQMPA_CTD_PTS_BOUGHT(newId());
-		    setQMPA_CTD_PTS_BONUS(newId());
-		    setQMPA_CTD_PTS_REDEEMED(newId());
-		    setQMPA_CTD_PTS_CLOSED(newId());
-		    setQMPA_CTD_PTS_EXPIRED(newId());
-		    setQMPA_CTD_PTS_ADJUST_IN(newId());
-		    setQMPA_CTD_PTS_ADJUST_OUT(newId());
+		    setQMPA_CTD_PTS_EARNED(generateRandomNumber());
+		    setQMPA_CTD_PTS_BOUGHT(generateRandomNumber());
+		    setQMPA_CTD_PTS_BONUS(generateRandomNumber());
+		    setQMPA_CTD_PTS_REDEEMED(generateRandomNumber());
+		    setQMPA_CTD_PTS_CLOSED(generateRandomNumber());
+		    setQMPA_CTD_PTS_EXPIRED(generateRandomNumber());
+		    setQMPA_CTD_PTS_ADJUST_IN(generateRandomNumber());
+		    setQMPA_CTD_PTS_ADJUST_OUT(generateRandomNumber());
 		    setQMPA_CLEAR_CTD_FLAG(newId());
 		    setQMPA_CTD_SPEND_EARNED(newId());
 		    setQMPA_LTD(newId());
 		    setFILLER_REDEFINES_QMPA_LTD(newId());
-		    setQMPA_LTD_PTS_EARNED(newId());
-		    setQMPA_LTD_PTS_BOUGHT(newId());
-		    setQMPA_LTD_PTS_BONUS(newId());
-		    setQMPA_LTD_PTS_REDEEMED(newId());
-		    setQMPA_LTD_PTS_CLOSED(newId());
-		    setQMPA_LTD_PTS_EXPIRED(newId());
-		    setQMPA_LTD_PTS_ADJUST_IN(newId());
-		    setQMPA_LTD_PTS_ADJUST_OUT(newId());
+		    setQMPA_LTD_PTS_EARNED(generateRandomNumber());
+		    setQMPA_LTD_PTS_BOUGHT(generateRandomNumber());
+		    setQMPA_LTD_PTS_BONUS(generateRandomNumber());
+		    setQMPA_LTD_PTS_REDEEMED(generateRandomNumber());
+		    setQMPA_LTD_PTS_CLOSED(generateRandomNumber());
+		    setQMPA_LTD_PTS_EXPIRED(generateRandomNumber());
+		    setQMPA_LTD_PTS_ADJUST_IN(generateRandomNumber());
+		    setQMPA_LTD_PTS_ADJUST_OUT(generateRandomNumber());
 		    setQMPA_YTD_SPEND_EARNED(newId());
 		    setQMPA_LTD_PTS_DISBURSED(newId());
 		    setQMPA_STMT_DTLS(newId());
 		    setQMPA_STMT_MONTH_FREQ(newId());
 		    setQMPA_STMT_DAY_OF_MONTH(newId());
-		    setQMPA_LAST_STMT_DATE(newId());
-		    setQMPA_NEXT_STMT_DATE(newId());
+		    setQMPA_LAST_STMT_DATE(generateDateWithLowerUpperBound(2017,2000));
+		    setQMPA_NEXT_STMT_DATE(generateDateWithLowerUpperBound(2017,2000));
 		    setQMPA_DATE_OPENED(newId());
 		    setQMPA_DATE_LAST_ACTIVE(newId());
 		    setQMPA_FIRST_USAGE_SWITCH(newId());
@@ -190,8 +189,8 @@ public class QMPAModelToCreate {
 		    setQMPA_AUTO_DISB_IND(newId());
 		    setQMPA_PREV_STMT_MONTH_FREQ(newId());
 		    setQMPA_AUTO_DISB_DBA_NAME(newId());
-		    setQMPA_STATUS_CHANGE_DATE(newId());
-		    setQMPA_START_DISBURSE_DATE(newId());
+		    setQMPA_STATUS_CHANGE_DATE(generateDateWithLowerUpperBound(2017,2000));
+		    setQMPA_START_DISBURSE_DATE(generateDateWithLowerUpperBound(2017,2000));
 		    setQMPA_REWARDS_CATEGORY(newId());
 		    setQMPA_AUTO_DISB_THRESHOLD(newId());
 		    setQMPA_ENROLLMENT_CHANNEL(newId());
@@ -201,26 +200,26 @@ public class QMPAModelToCreate {
 		    setQMPA_NEXT_MEMB_FEE_DTE(newId());
 		    setQMPA_NEXT_MEMB_FEE_AMT(newId());
 		    setQMPA_REDMPT_CHNL_CT(newId());
-		    setQMPA_AR_OPEN_DATE(newId());
+		    setQMPA_AR_OPEN_DATE(generateDateWithLowerUpperBound(2017,2000));
 		    setQMPA_ENROLL_CHNL_SWITCH(newId());
 		    setQMPA_MTD(newId());
 		    setFILLER_REDEFINES_QMPA_MTD(newId());
-		    setQMPA_MTD_PTS_EARNED(newId());
-		    setQMPA_MTD_PTS_BOUGHT(newId());
-		    setQMPA_MTD_PTS_BONUS(newId());
-		    setQMPA_MTD_PTS_REDEEMED(newId());
-		    setQMPA_MTD_PTS_CLOSED(newId());
-		    setQMPA_MTD_PTS_EXPIRED(newId());
-		    setQMPA_MTD_PTS_ADJUST_IN(newId());
-		    setQMPA_MTD_PTS_ADJUST_OUT(newId());
+		    setQMPA_MTD_PTS_EARNED(generateRandomNumber());
+		    setQMPA_MTD_PTS_BOUGHT(generateRandomNumber());
+		    setQMPA_MTD_PTS_BONUS(generateRandomNumber());
+		    setQMPA_MTD_PTS_REDEEMED(generateRandomNumber());
+		    setQMPA_MTD_PTS_CLOSED(generateRandomNumber());
+		    setQMPA_MTD_PTS_EXPIRED(generateRandomNumber());
+		    setQMPA_MTD_PTS_ADJUST_IN(generateRandomNumber());
+		    setQMPA_MTD_PTS_ADJUST_OUT(generateRandomNumber());
 		    setQMPA_CLEAR_MTD_FLAG(newId());
 		    setQMPA_CLEAR_YTD_FLAG(newId());
-		    setQMPA_NEXT_ANNIV_DATE(newId());
+		    setQMPA_NEXT_ANNIV_DATE(generateDateWithLowerUpperBound(2017,2000));
 		    setQMPA_TODAY_HH_ACTIVITY(newId());
 		    setQMPA_LTD_PTS_TOTAL(newId());
 		    setQMPA_LMS_FIRST_USAGE_SWITCH(newId());
 		    setQMPA_HI_XFR_STATUS(newId());
-		    setQMPA_HI_XFR_OUT_DATE(newId());
+		    setQMPA_HI_XFR_OUT_DATE(generateDateWithLowerUpperBound(2017,2000));
 		    setQMPA_HI_HSBC_AREA(newId());
 		    setQMPA_HI_GLOBAL_AREA_1(newId());
 		    setQMPA_FEE_FLAG(newId());
@@ -369,6 +368,18 @@ public class QMPAModelToCreate {
 			UUID uuid = UUID.randomUUID();
 			return uuid.toString();
 		}
+		
+		public String generateRandomNumber(){
+			 
+					
+			Integer number =(int) (1+(Math.random()*(1001-2)+1));
+					return number.toString();
+		}
+		public static String generateDateWithLowerUpperBound(int maxYear, int minYear){
+
+			return String.valueOf((int)(1+((Math.random()*(12-2)+1))))+"/"+String.valueOf((int)(1+((Math.random()*(30-2)+1))))+"/"+String.valueOf((int)(minYear+((Math.random())*((maxYear-minYear)+1))));
+
+			}
 		
 		public String getQMPA_RECORD() {
 			return QMPA_RECORD;
