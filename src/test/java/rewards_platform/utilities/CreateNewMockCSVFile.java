@@ -13,25 +13,54 @@ import java.io.*;
 public class CreateNewMockCSVFile {
 	
 	private List<QMPAModelToCreate> QMPA;
+	public List<QMPAModelToCreate> getQMPA() {
+		return QMPA;
+	}
+	public List<QMADModelToCreate> getQMAD() {
+		return QMAD;
+	}
+	public List<QMXRModelToCreate> getQMXR() {
+		return QMXR;
+	}
+
 	private List<QMADModelToCreate> QMAD;
 	private List<QMXRModelToCreate> QMXR;
 
 	 private static FileWriter fileWriter;
 	 
+	 
+	 public void generateRows(int numberOfRows){
+			QMPA = new ArrayList<QMPAModelToCreate>();
+			QMXR = new ArrayList<QMXRModelToCreate>();
+			QMAD = new ArrayList<QMADModelToCreate>();
+			for (int i = 0; i < numberOfRows; i++) {
+				QMAD.add(new QMADModelToCreate());
+			}
+			for (int i = 0; i < numberOfRows; i++) {
+				QMPA.add(new QMPAModelToCreate(QMAD.get(i).getQMAD_ACCT()));
+				QMXR.add(new QMXRModelToCreate());
+			
+			}
+			
+
+	 }
+	 public CreateNewMockCSVFile(int numberOfRows, String fileName){	 
+		 generateRows(numberOfRows);		
+		 createMockModelQMAD(Header.getQMADHeader(), fileName+"QMAD");
+		 createMockModelQMPA(Header.getQMPAHeader(),fileName+"QMPA", numberOfRows);
+		 createMockModelQMXR(Header.getQMXRHeader(), fileName+"QMXR");	 
+	 }
+	 
 	 public void createMockModelQMPA(List<String> header, String fileName, int numberOfRows){
 		try {
-			QMPA = new ArrayList<QMPAModelToCreate>();
-
-			int n = numberOfRows;
-			for (int i = 0; i < n; i++) {
-				QMPA.add(new QMPAModelToCreate());
-			}
 				fileWriter = new FileWriter("./src/test/resources/rewards_platform/test_data/"+fileName+".csv");
 				CSVUtils.writeLine(fileWriter, header, ',', '"');
-
-				for (QMPAModelToCreate mockData : QMPA) {
-					List<String> mockDataS = new ArrayList<String>();
-					mockDataS=mockData.getQMPA();
+				
+					
+					for (QMPAModelToCreate mockData : QMPA) {
+						List<String> mockDataS = new ArrayList<String>();
+						mockDataS=mockData.getQMPA();
+						
 					CSVUtils.writeLine(fileWriter, mockDataS, ',', '"');
 				}
 			
@@ -42,14 +71,9 @@ public class CreateNewMockCSVFile {
 			e.printStackTrace();
 		}
 	}
-	 void createMockModelQMXR(List<String> header, String fileName, int numberOfRows){
+	 void createMockModelQMXR(List<String> header, String fileName){
 			try {
-				QMXR = new ArrayList<QMXRModelToCreate>();
 
-				int n = numberOfRows;
-				for (int i = 0; i < n; i++) {
-					QMXR.add(new QMXRModelToCreate());
-				}
 					fileWriter = new FileWriter("./src/test/resources/rewards_platform/test_data/"+fileName+".csv");
 					CSVUtils.writeLine(fileWriter, header, ',', '"');
 
@@ -66,14 +90,9 @@ public class CreateNewMockCSVFile {
 				e.printStackTrace();
 			}
 		}
-	 void createMockModelQMAD(List<String> header, String fileName, int numberOfRows){
+	 void createMockModelQMAD(List<String> header, String fileName){
 			try {
-				QMAD = new ArrayList<QMADModelToCreate>();
 
-				int n = numberOfRows;
-				for (int i = 0; i < n; i++) {
-					QMAD.add(new QMADModelToCreate());
-				}
 					fileWriter = new FileWriter("./src/test/resources/rewards_platform/test_data/"+fileName+".csv");
 					CSVUtils.writeLine(fileWriter, header, ',', '"');
 
@@ -93,8 +112,8 @@ public class CreateNewMockCSVFile {
 
 	public static void main(String[] args) {
 			
-		CreateNewMockCSVFile create = new CreateNewMockCSVFile();
-		create.createMockModelQMPA(Header.getQMPAHeader(), "BratanItIsWorking", 100);
+		CreateNewMockCSVFile create = new CreateNewMockCSVFile(10, "TestData02");
+		
 		
 	}
 }

@@ -128,13 +128,13 @@ public class QMPAModelToCreate {
 		return mockData;
 	}
 	
-	public QMPAModelToCreate() {
+	public QMPAModelToCreate(String string) {
 	
 			setQMPA_RECORD(newId());
 			setQMPA_KEY(newId());
 			setQMPA_KEY_ORG_ACCT(newId());
 			setQMPA_ORG(newId());
-			setQMPA_ACCT(newId());
+			setQMPA_ACCT(string);
 			setQMPA_SCHEME_ID(newId());
 			setQMPA_ADD_STATUS(newId());
 			setQMPA_INT_STATUS(newId());

@@ -176,7 +176,7 @@ public class DataValidation {
 		return status;
 	}
 	//to compare two list items (they must be in the same order!)
-	public static boolean containsAll(List<String> listOne, List<String> listTwo){
+	public static boolean containsAllIDs(List<String> listOne, List<String> listTwo){
 		if((!(isDuplicate(listOne)))&&((!isDuplicate(listTwo)))){
 			if (!(listOne.size()==listTwo.size())){
 				return false;
