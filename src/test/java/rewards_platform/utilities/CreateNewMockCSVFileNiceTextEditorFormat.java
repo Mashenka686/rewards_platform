@@ -10,7 +10,7 @@ import java.io.*;
 /**
  * This class will generate new csv file with headers and random ID for each column with n numbers of rows */
 
-public class CreateNewMockCSVFile {
+public class CreateNewMockCSVFileNiceTextEditorFormat {
 	
 	private List<QMPAModelToCreate> QMPA;
 	public List<QMPAModelToCreate> getQMPA() {
@@ -45,7 +45,7 @@ public class CreateNewMockCSVFile {
 			
 
 	 }
-	 public CreateNewMockCSVFile(int numberOfRows, String fileName){	 
+	 public CreateNewMockCSVFileNiceTextEditorFormat(int numberOfRows, String fileName){	 
 		 generateRows(numberOfRows);		
 		 createMockModelQMAD(Header.getQMADHeader(), fileName+"QMAD");
 		 createMockModelQMPA(Header.getQMPAHeader(),fileName+"QMPA", numberOfRows);
@@ -55,14 +55,14 @@ public class CreateNewMockCSVFile {
 	 public void createMockModelQMPA(List<String> header, String fileName, int numberOfRows){
 		try {
 				fileWriter = new FileWriter("./src/test/resources/rewards_platform/test_data/"+fileName+".csv");
-				CSVUtils.writeLine(fileWriter, header,',', '"');
+				CSVUtils.writeLine(fileWriter, header,' ', '"');
 				
 					
 					for (QMPAModelToCreate mockData : QMPA) {
 						List<String> mockDataS = new ArrayList<String>();
 						mockDataS=mockData.getQMPA();
 						
-					CSVUtils.writeLine(fileWriter, mockDataS, ',', '"');
+					CSVUtils.writeLine(fileWriter, mockDataS, ' ', '"');
 				}
 			
 				fileWriter.flush();
@@ -76,12 +76,12 @@ public class CreateNewMockCSVFile {
 			try {
 
 					fileWriter = new FileWriter("./src/test/resources/rewards_platform/test_data/"+fileName+".csv");
-					CSVUtils.writeLine(fileWriter, header, ',', '"');
+					CSVUtils.writeLine(fileWriter, header, ' ', '"');
 
 					for (QMXRModelToCreate mockData : QMXR) {
 						List<String> mockDataS = new ArrayList<String>();
 						mockDataS=mockData.getQMXR();
-						CSVUtils.writeLine(fileWriter, mockDataS, ',', '"');
+						CSVUtils.writeLine(fileWriter, mockDataS, ' ', '"');
 					}
 				
 					fileWriter.flush();
@@ -95,12 +95,12 @@ public class CreateNewMockCSVFile {
 			try {
 
 					fileWriter = new FileWriter("./src/test/resources/rewards_platform/test_data/"+fileName+".csv");
-					CSVUtils.writeLine(fileWriter, header, ',', '"');
+					CSVUtils.writeLine(fileWriter, header, ' ', '"');
 
 					for (QMADModelToCreate mockData : QMAD) {
 						List<String> mockDataS = new ArrayList<String>();
 						mockDataS=mockData.getQMAD();
-						CSVUtils.writeLine(fileWriter, mockDataS, ',', '"');
+						CSVUtils.writeLine(fileWriter, mockDataS, ' ', '"');
 					}
 				
 					fileWriter.flush();
