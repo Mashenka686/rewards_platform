@@ -4,70 +4,68 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-import rewards_platform.utilities.DataValidation;
-
-public class QMADModelToCreate {
+public class QMADModelToCreateOriginal {
 	public List<String> getQMAD(){
 		List<String> mockData = new ArrayList<String>();
-		mockData.add(DataValidation.alignSize(getQMAD_RECORD()));
-		mockData.add(DataValidation.alignSize(getQMAD_KEY()));
-		mockData.add(DataValidation.alignSize(getQMAD_ORG()));
-		mockData.add(DataValidation.alignSize(getQMAD_ACCT()));
-		mockData.add(DataValidation.alignSize(getQMAD_ADD_STATUS()));
-		mockData.add(DataValidation.alignSize(getQMAD_INT_STATUS()));
-		mockData.add(DataValidation.alignSize(getQMAD_LAST_MAINT_OPER()));
-		mockData.add(DataValidation.alignSize(getQMAD_LAST_MAINT_DATE()));
-		mockData.add(DataValidation.alignSize(getQMAD_NAME_ADDRESS_SOURCE_FLAG()));
-		mockData.add(DataValidation.alignSize(getQMAD_DATE_LAST_ADDR_CHANGE()));
-		mockData.add(DataValidation.alignSize(getQMAD_CUST_NAME_ADDR_DATA()));
-		mockData.add(DataValidation.alignSize(getQMAD_TITLE()));	
-		mockData.add(DataValidation.alignSize(getQMAD_DOB()));
-		mockData.add(DataValidation.alignSize(getQMAD_CNTRY_CD()));
-		mockData.add(DataValidation.alignSize(getQMAD_PSTL_CD()));
-		mockData.add(DataValidation.alignSize(getQMAD_EMAIL()));
-		mockData.add(DataValidation.alignSize(getQMAD_NAME_1()));
-		mockData.add(DataValidation.alignSize(getQMAD_NAME_2()));
-		mockData.add(DataValidation.alignSize(getQMAD_NAME_3()));
-		mockData.add(DataValidation.alignSize(getQMAD_ADDR_1()));
-		mockData.add(DataValidation.alignSize(getQMAD_ADDR_2()));
-		mockData.add(DataValidation.alignSize(getQMAD_CITY_STATE()));
-		mockData.add(DataValidation.alignSize(getQMAD_CITY_STATE_R_REDEFINES_QMAD_CITY_STATE()));
-		mockData.add(DataValidation.alignSize(getQMAD_CITY()));
-		mockData.add(DataValidation.alignSize(getFILLER2()));
-		mockData.add(DataValidation.alignSize(getQMAD_STATE()));
-		mockData.add(DataValidation.alignSize(getQMAD_MEMO_1()));
-		mockData.add(DataValidation.alignSize(getQMAD_MEMO_2()));
-		mockData.add(DataValidation.alignSize(getFILLER3()));
-		mockData.add(DataValidation.alignSize(getQMAD_VIP_FLAG()));
-		mockData.add(DataValidation.alignSize(getQMAD_SIC_CODE()));
-		mockData.add(DataValidation.alignSize(getQMAD_SERVICE_FLAG()));
-		mockData.add(DataValidation.alignSize(getQMAD_PRIMARY_ACCOUNT()));
-		mockData.add(DataValidation.alignSize(getQMAD_PRIMARY_SRC()));
-		mockData.add(DataValidation.alignSize(getQMAD_PRIMARY_ACCT()));
-		mockData.add(DataValidation.alignSize(getQMAD_PRIMARY_CMS_ORG()));
-		mockData.add(DataValidation.alignSize(getQMAD_PRIMARY_CMS_ACCT()));
-		mockData.add(DataValidation.alignSize(getFILLER4()));
-		mockData.add(DataValidation.alignSize(getQMAD_CREATE_DATE()));
-		mockData.add(DataValidation.alignSize(getQMAD_OPEN_DATE()));
-		mockData.add(DataValidation.alignSize(getQMAD_CLOSE_DATE()));
-		mockData.add(DataValidation.alignSize(getQMAD_PURGE_DATE()));
-		mockData.add(DataValidation.alignSize(getQMAD_OWNING_BRANCH()));
-		mockData.add(DataValidation.alignSize(getQMAD_SEGMENT_ID()));
-		mockData.add(DataValidation.alignSize(getQMAD_CUST_ID()));
-		mockData.add(DataValidation.alignSize(getQMAD_HI_HSBC_AREA()));
-		mockData.add(DataValidation.alignSize(getQMAD_HI_GLOBAL_AREA_1()));
-		mockData.add(DataValidation.alignSize(getQMAD_HI_ISO_LANG_CODE()));
-		mockData.add(DataValidation.alignSize(getQMAD_GLBL_GENDER()));
-		mockData.add(DataValidation.alignSize(getQMAD_GLBL_FIRST_NAME()));
-		mockData.add(DataValidation.alignSize(getQMAD_GLBL_MIDDLE_NAME()));
-		mockData.add(DataValidation.alignSize(getQMAD_GLBL_LAST_NAME()));
-		mockData.add(DataValidation.alignSize(getQMAD_GLBL_NAME_SUFFIX()));
-		mockData.add(DataValidation.alignSize(getQMAD_GLBL_COUNTY()));
-		mockData.add(DataValidation.alignSize(getQMAD_HI_GLOBAL_FILLER_1()));
-		mockData.add(DataValidation.alignSize(getQMAD_HI_BUS_UNIT_AREA_1()));
-		mockData.add(DataValidation.alignSize(getQMAD_HI_BUS_UNIT_FILLER_1()));
-		mockData.add(DataValidation.alignSize(getQMAD_HI_REGIONAL_AREA_1()));
-		mockData.add(DataValidation.alignSize(getQMAD_HI_REGIONAL_FILLER_1()));
+		mockData.add(getQMAD_RECORD());
+		mockData.add(getQMAD_KEY());
+		mockData.add(getQMAD_ORG());
+		mockData.add(getQMAD_ACCT());
+		mockData.add(getQMAD_ADD_STATUS());
+		mockData.add(getQMAD_INT_STATUS());
+		mockData.add(getQMAD_LAST_MAINT_OPER());
+		mockData.add(getQMAD_LAST_MAINT_DATE());
+		mockData.add(getQMAD_NAME_ADDRESS_SOURCE_FLAG());
+		mockData.add(getQMAD_DATE_LAST_ADDR_CHANGE());
+		mockData.add(getQMAD_CUST_NAME_ADDR_DATA());
+		mockData.add(getQMAD_TITLE());	
+		mockData.add(getQMAD_DOB());
+		mockData.add(getQMAD_CNTRY_CD());
+		mockData.add(getQMAD_PSTL_CD());
+		mockData.add(getQMAD_EMAIL());
+		mockData.add(getQMAD_NAME_1());
+		mockData.add(getQMAD_NAME_2());
+		mockData.add(getQMAD_NAME_3());
+		mockData.add(getQMAD_ADDR_1());
+		mockData.add(getQMAD_ADDR_2());
+		mockData.add(getQMAD_CITY_STATE());
+		mockData.add(getQMAD_CITY_STATE_R_REDEFINES_QMAD_CITY_STATE());
+		mockData.add(getQMAD_CITY());
+		mockData.add(getFILLER2());
+		mockData.add(getQMAD_STATE());
+		mockData.add(getQMAD_MEMO_1());
+		mockData.add(getQMAD_MEMO_2());
+		mockData.add(getFILLER3());
+		mockData.add(getQMAD_VIP_FLAG());
+		mockData.add(getQMAD_SIC_CODE());
+		mockData.add(getQMAD_SERVICE_FLAG());
+		mockData.add(getQMAD_PRIMARY_ACCOUNT());
+		mockData.add(getQMAD_PRIMARY_SRC());
+		mockData.add(getQMAD_PRIMARY_ACCT());
+		mockData.add(getQMAD_PRIMARY_CMS_ORG());
+		mockData.add(getQMAD_PRIMARY_CMS_ACCT());
+		mockData.add(getFILLER4());
+		mockData.add(getQMAD_CREATE_DATE());
+		mockData.add(getQMAD_OPEN_DATE());
+		mockData.add(getQMAD_CLOSE_DATE());
+		mockData.add(getQMAD_PURGE_DATE());
+		mockData.add(getQMAD_OWNING_BRANCH());
+		mockData.add(getQMAD_SEGMENT_ID());
+		mockData.add(getQMAD_CUST_ID());
+		mockData.add(getQMAD_HI_HSBC_AREA());
+		mockData.add(getQMAD_HI_GLOBAL_AREA_1());
+		mockData.add(getQMAD_HI_ISO_LANG_CODE());
+		mockData.add(getQMAD_GLBL_GENDER());
+		mockData.add(getQMAD_GLBL_FIRST_NAME());
+		mockData.add(getQMAD_GLBL_MIDDLE_NAME());
+		mockData.add(getQMAD_GLBL_LAST_NAME());
+		mockData.add(getQMAD_GLBL_NAME_SUFFIX());
+		mockData.add(getQMAD_GLBL_COUNTY());
+		mockData.add(getQMAD_HI_GLOBAL_FILLER_1());
+		mockData.add(getQMAD_HI_BUS_UNIT_AREA_1());
+		mockData.add(getQMAD_HI_BUS_UNIT_FILLER_1());
+		mockData.add(getQMAD_HI_REGIONAL_AREA_1());
+		mockData.add(getQMAD_HI_REGIONAL_FILLER_1());
 		
 		
 		return mockData;
@@ -75,7 +73,7 @@ public class QMADModelToCreate {
 
 
 
-	public QMADModelToCreate() {
+	public QMADModelToCreateOriginal() {
 		
 		setQMAD_RECORD(newId());
 		setQMAD_KEY(newId());

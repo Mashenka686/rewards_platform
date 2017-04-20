@@ -4,41 +4,39 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-import rewards_platform.utilities.DataValidation;
-
-public class QMXRModelToCreate {
+public class QMXRModelToCreateOriginal {
 	
 	public List<String> getQMXR(){
 		List<String> mockData = new ArrayList<String>();
-		mockData.add(DataValidation.alignSize(getQMXR_RECORD()));
-		mockData.add(DataValidation.alignSize(getQMXR_KEY()));
-		mockData.add(DataValidation.alignSize(getQMXR_AR_KEY()));
-		mockData.add(DataValidation.alignSize(getQMXR_KEY_CMS_REDEFINES_QMXR_AR_KEY()));
-		mockData.add(DataValidation.alignSize(getQMXR_SOURCE()));
-		mockData.add(DataValidation.alignSize(getQMXR_CMS_ORG()));
-		mockData.add(DataValidation.alignSize(getQMXR_CMS_ACCT_NBR()));
-		mockData.add(DataValidation.alignSize(getFILLER5()));
-		mockData.add(DataValidation.alignSize(getQMXR_LMS_KEY()));
-		mockData.add(DataValidation.alignSize(getQMXR_ORG()));
-		mockData.add(DataValidation.alignSize(getQMXR_ACC()));
-		mockData.add(DataValidation.alignSize(getQMXR_ADD_STATUS()));	
-		mockData.add(DataValidation.alignSize(getQMXR_INT_STATUS()));
-		mockData.add(DataValidation.alignSize(getQMXR_LAST_MAINT_OPER()));
-		mockData.add(DataValidation.alignSize(getQMXR_LAST_MAINT_DATE()));
-		mockData.add(DataValidation.alignSize(getQMXR_HI_HSBC_AREA()));
-		mockData.add(DataValidation.alignSize(getQMXR_HI_GLOBAL_AREA_1()));
-		mockData.add(DataValidation.alignSize(getQMXR_HI_GLOBAL_FILLER_1()));
-		mockData.add(DataValidation.alignSize(getQMXR_HI_BUS_UNIT_AREA_1()));
-		mockData.add(DataValidation.alignSize(getQMXR_HI_BUS_UNIT_FILLER_1()));
-		mockData.add(DataValidation.alignSize(getQMXR_HI_REGIONAL_AREA_1()));
-		mockData.add(DataValidation.alignSize(getQMXR_HI_REGIONAL_FILLER_1()));
+		mockData.add(getQMXR_RECORD());
+		mockData.add(getQMXR_KEY());
+		mockData.add(getQMXR_AR_KEY());
+		mockData.add(getQMXR_KEY_CMS_REDEFINES_QMXR_AR_KEY());
+		mockData.add(getQMXR_SOURCE());
+		mockData.add(getQMXR_CMS_ORG());
+		mockData.add(getQMXR_CMS_ACCT_NBR());
+		mockData.add(getFILLER5());
+		mockData.add(getQMXR_LMS_KEY());
+		mockData.add(getQMXR_ORG());
+		mockData.add(getQMXR_ACC());
+		mockData.add(getQMXR_ADD_STATUS());	
+		mockData.add(getQMXR_INT_STATUS());
+		mockData.add(getQMXR_LAST_MAINT_OPER());
+		mockData.add(getQMXR_LAST_MAINT_DATE());
+		mockData.add(getQMXR_HI_HSBC_AREA());
+		mockData.add(getQMXR_HI_GLOBAL_AREA_1());
+		mockData.add(getQMXR_HI_GLOBAL_FILLER_1());
+		mockData.add(getQMXR_HI_BUS_UNIT_AREA_1());
+		mockData.add(getQMXR_HI_BUS_UNIT_FILLER_1());
+		mockData.add(getQMXR_HI_REGIONAL_AREA_1());
+		mockData.add(getQMXR_HI_REGIONAL_FILLER_1());
 		
 		
 		return mockData;
 	}
 
 	
-	public QMXRModelToCreate(String string) {
+	public QMXRModelToCreateOriginal(String string) {
 		
 		setQMXR_RECORD(newId());
 		setQMXR_KEY(newId());
@@ -46,6 +44,7 @@ public class QMXRModelToCreate {
 		setQMXR_KEY_CMS_REDEFINES_QMXR_AR_KEY(newId());
 		setQMXR_SOURCE(newId());
 		setQMXR_CMS_ORG(newId());
+		//setQMXR_CMS_ACCT_NBR(newId());
 		setQMXR_CMS_ACCT_NBR(string);
 		setFILLER5(newId());
 		setQMXR_LMS_KEY(newId());
@@ -93,7 +92,6 @@ public class QMXRModelToCreate {
 			UUID uuid = UUID.randomUUID();
 			return uuid.toString();
 		}
-		
 		
 		
 		

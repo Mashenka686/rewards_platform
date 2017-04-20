@@ -53,16 +53,22 @@ public class CreateNewMockCSVFileNiceTextEditorFormat {
 	 }
 	 
 	 public void createMockModelQMPA(List<String> header, String fileName, int numberOfRows){
-		try {
+		try {	List<String> updatedHeader=new ArrayList<String>();
 				fileWriter = new FileWriter("./src/test/resources/rewards_platform/test_data/"+fileName+".csv");
-				CSVUtils.writeLine(fileWriter, header,' ', '"');
 				
-					
+				for(int i=0; i<header.size();i++){
+					System.out.println("header bevore: "+header.get(i)+"end");
+					updatedHeader.add(DataValidation.alignSize(header.get(i)));
+					System.out.println("header after: "+updatedHeader.get(i)+"end");
+				}
+				CSVUtils.writeLine(fileWriter, updatedHeader,' ', ' ');
+				
+			//	List<String> updatedMockDataS = new ArrayList<String>();
 					for (QMPAModelToCreate mockData : QMPA) {
 						List<String> mockDataS = new ArrayList<String>();
 						mockDataS=mockData.getQMPA();
-						
-					CSVUtils.writeLine(fileWriter, mockDataS, ' ', '"');
+
+					CSVUtils.writeLine(fileWriter, mockDataS, ' ', ' ');
 				}
 			
 				fileWriter.flush();
@@ -73,15 +79,19 @@ public class CreateNewMockCSVFileNiceTextEditorFormat {
 		}
 	}
 	 void createMockModelQMXR(List<String> header, String fileName){
-			try {
-
-					fileWriter = new FileWriter("./src/test/resources/rewards_platform/test_data/"+fileName+".csv");
-					CSVUtils.writeLine(fileWriter, header, ' ', '"');
-
+			try {	List<String> updatedHeader=new ArrayList<String>();
+			fileWriter = new FileWriter("./src/test/resources/rewards_platform/test_data/"+fileName+".csv");
+			
+			for(int i=0; i<header.size();i++){
+				System.out.println("header bevore: "+header.get(i)+"end");
+				updatedHeader.add(DataValidation.alignSize(header.get(i)));
+				System.out.println("header after: "+updatedHeader.get(i)+"end");
+			}
+			CSVUtils.writeLine(fileWriter, updatedHeader,' ', ' ');
 					for (QMXRModelToCreate mockData : QMXR) {
 						List<String> mockDataS = new ArrayList<String>();
 						mockDataS=mockData.getQMXR();
-						CSVUtils.writeLine(fileWriter, mockDataS, ' ', '"');
+						CSVUtils.writeLine(fileWriter, mockDataS, ' ', ' ');
 					}
 				
 					fileWriter.flush();
@@ -92,15 +102,19 @@ public class CreateNewMockCSVFileNiceTextEditorFormat {
 			}
 		}
 	 void createMockModelQMAD(List<String> header, String fileName){
-			try {
-
-					fileWriter = new FileWriter("./src/test/resources/rewards_platform/test_data/"+fileName+".csv");
-					CSVUtils.writeLine(fileWriter, header, ' ', '"');
-
+				try {	List<String> updatedHeader=new ArrayList<String>();
+				fileWriter = new FileWriter("./src/test/resources/rewards_platform/test_data/"+fileName+".csv");
+				
+				for(int i=0; i<header.size();i++){
+					System.out.println("header bevore: "+header.get(i)+"end");
+					updatedHeader.add(DataValidation.alignSize(header.get(i)));
+					System.out.println("header after: "+updatedHeader.get(i)+"end");
+				}
+				CSVUtils.writeLine(fileWriter, updatedHeader,' ', ' ');
 					for (QMADModelToCreate mockData : QMAD) {
 						List<String> mockDataS = new ArrayList<String>();
 						mockDataS=mockData.getQMAD();
-						CSVUtils.writeLine(fileWriter, mockDataS, ' ', '"');
+						CSVUtils.writeLine(fileWriter, mockDataS, ' ', ' ');
 					}
 				
 					fileWriter.flush();

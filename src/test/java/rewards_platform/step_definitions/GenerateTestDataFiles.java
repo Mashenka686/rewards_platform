@@ -46,7 +46,6 @@ public class GenerateTestDataFiles {
 	
 	@Given("^I should be able to generate (\\d+) rows for the \"([^\"]*)\" file that will look nice when open as Text Editor$")
 	public void i_should_be_able_to_generate_rows_for_the_file_that_will_look_nice_when_open_as_Text_Editor(int numberOfRows, String fileName) throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
 		newTextFiles = new CreateNewMockCSVFileNiceTextEditorFormat(numberOfRows, fileName);
 	}
 }

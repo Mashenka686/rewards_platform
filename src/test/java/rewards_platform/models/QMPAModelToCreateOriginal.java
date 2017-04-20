@@ -1,135 +1,134 @@
 package rewards_platform.models;
 
 
+
 import java.util.*;
 
-import rewards_platform.utilities.DataValidation;
 
-
-public class QMPAModelToCreate {
+public class QMPAModelToCreateOriginal {
 	
 	public List<String> getQMPA(){
 		List<String> mockData = new ArrayList<String>();
-		mockData.add(DataValidation.alignSize(getQMPA_RECORD()));
-		mockData.add(DataValidation.alignSize(getQMPA_KEY()));
-		mockData.add(DataValidation.alignSize(getQMPA_KEY_ORG_ACCT()));
-		mockData.add(DataValidation.alignSize(getQMPA_ORG()));
-		mockData.add(DataValidation.alignSize(getQMPA_ACCT()));
-		mockData.add(DataValidation.alignSize(getQMPA_SCHEME_ID()));
-		mockData.add(DataValidation.alignSize(getQMPA_ADD_STATUS()));
-		mockData.add(DataValidation.alignSize(getQMPA_INT_STATUS()));
-		mockData.add(DataValidation.alignSize(getQMPA_LAST_MAINT_OPER()));
-		mockData.add(DataValidation.alignSize(getQMPA_LAST_MAINT_DATE()));
-		mockData.add(DataValidation.alignSize(getQMPA_SERVICE_FLAG()));
-		mockData.add(DataValidation.alignSize(getQMPA_AUTO_DISB_FLAG()));	
-		mockData.add(DataValidation.alignSize(getQMPA_AUTO_DISB_LAST_DATE()));
-		mockData.add(DataValidation.alignSize(getQMPA_AUTO_DISB_ACCT()));
-		mockData.add(DataValidation.alignSize(getQMPA_BLOCK_CODE_1()));
-		mockData.add(DataValidation.alignSize(getQMPA_ROLLUP_LAST_DATE()));
-		mockData.add(DataValidation.alignSize(getQMPA_OUTSTANDING_REDEMPTION()));
-		mockData.add(DataValidation.alignSize(getQMPA_ACTV_LAST_DATE()));
-		mockData.add(DataValidation.alignSize(getQMPA_ACTV_NEXT_DATE()));
-		mockData.add(DataValidation.alignSize(getQMPA_CTD()));
-		mockData.add(DataValidation.alignSize(getFILLER_REDEFINES_QMPA_CTD()));
-		mockData.add(DataValidation.alignSize(getQMPA_CTD_PTS_EARNED()));
-		mockData.add(DataValidation.alignSize(getQMPA_CTD_PTS_BOUGHT()));
-		mockData.add(DataValidation.alignSize(getQMPA_CTD_PTS_BONUS()));
-		mockData.add(DataValidation.alignSize(getQMPA_CTD_PTS_REDEEMED()));
-		mockData.add(DataValidation.alignSize(getQMPA_CTD_PTS_CLOSED()));
-		mockData.add(DataValidation.alignSize(getQMPA_CTD_PTS_EXPIRED()));
-		mockData.add(DataValidation.alignSize(getQMPA_CTD_PTS_ADJUST_IN()));
-		mockData.add(DataValidation.alignSize(getQMPA_CTD_PTS_ADJUST_OUT()));
-		mockData.add(DataValidation.alignSize(getQMPA_CLEAR_CTD_FLAG()));
-		mockData.add(DataValidation.alignSize(getQMPA_CTD_SPEND_EARNED()));
-		mockData.add(DataValidation.alignSize(getQMPA_LTD()));
-		mockData.add(DataValidation.alignSize(getFILLER_REDEFINES_QMPA_LTD()));
-		mockData.add(DataValidation.alignSize(getQMPA_LTD_PTS_EARNED()));
-		mockData.add(DataValidation.alignSize(getQMPA_LTD_PTS_BOUGHT()));
-		mockData.add(DataValidation.alignSize(getQMPA_LTD_PTS_BONUS()));
-		mockData.add(DataValidation.alignSize(getQMPA_LTD_PTS_REDEEMED()));
-		mockData.add(DataValidation.alignSize(getQMPA_LTD_PTS_CLOSED()));
-		mockData.add(DataValidation.alignSize(getQMPA_LTD_PTS_EXPIRED()));
-		mockData.add(DataValidation.alignSize(getQMPA_LTD_PTS_ADJUST_IN()));
-		mockData.add(DataValidation.alignSize(getQMPA_LTD_PTS_ADJUST_OUT()));
-		mockData.add(DataValidation.alignSize(getQMPA_YTD_SPEND_EARNED()));
-		mockData.add(DataValidation.alignSize(getQMPA_LTD_PTS_DISBURSED()));
-		mockData.add(DataValidation.alignSize(getQMPA_STMT_DTLS()));
-		mockData.add(DataValidation.alignSize(getQMPA_STMT_MONTH_FREQ()));
-		mockData.add(DataValidation.alignSize(getQMPA_STMT_DAY_OF_MONTH()));
-		mockData.add(DataValidation.alignSize(getQMPA_LAST_STMT_DATE()));
-		mockData.add(DataValidation.alignSize(getQMPA_NEXT_STMT_DATE()));
-		mockData.add(DataValidation.alignSize(getQMPA_DATE_OPENED()));
-		mockData.add(DataValidation.alignSize(getQMPA_DATE_LAST_ACTIVE()));
-		mockData.add(DataValidation.alignSize(getQMPA_FIRST_USAGE_SWITCH()));
-		mockData.add(DataValidation.alignSize(getQMPA_ACCT_OPEN_SWITCH()));
-		mockData.add(DataValidation.alignSize(getQMPA_BLOCK_CODE_MODE()));
-		mockData.add(DataValidation.alignSize(getQMPA_DELINQUENCY_MODE()));
-		mockData.add(DataValidation.alignSize(getQMPA_DISBURSE_PACKET_POINTS()));
-		mockData.add(DataValidation.alignSize(getQMPA_AUTO_DISB_FREQ()));
-		mockData.add(DataValidation.alignSize(getQMPA_AUTO_DISB_DAY_OF_MONTH()));
-		mockData.add(DataValidation.alignSize(getQMPA_AUTO_DISB_IND()));
-		mockData.add(DataValidation.alignSize(getQMPA_PREV_STMT_MONTH_FREQ()));
-		mockData.add(DataValidation.alignSize(getQMPA_AUTO_DISB_DBA_NAME()));
-		mockData.add(DataValidation.alignSize(getQMPA_STATUS_CHANGE_DATE()));
-		mockData.add(DataValidation.alignSize(getQMPA_START_DISBURSE_DATE()));
-		mockData.add(DataValidation.alignSize(getQMPA_REWARDS_CATEGORY()));
-		mockData.add(DataValidation.alignSize(getQMPA_AUTO_DISB_THRESHOLD()));
-		mockData.add(DataValidation.alignSize(getQMPA_ENROLLMENT_CHANNEL()));
-		mockData.add(DataValidation.alignSize(getQMPA_PURGE_DATE()));
-		mockData.add(DataValidation.alignSize(getQMPA_WAIVE_MEMB_FEE()));
-		mockData.add(DataValidation.alignSize(getQMPA_DEFER_MEMB_FEE_DTE()));
-		mockData.add(DataValidation.alignSize(getQMPA_NEXT_MEMB_FEE_DTE()));
-		mockData.add(DataValidation.alignSize(getQMPA_NEXT_MEMB_FEE_AMT()));
-		mockData.add(DataValidation.alignSize(getQMPA_REDMPT_CHNL_CT()));
-		mockData.add(DataValidation.alignSize(getQMPA_AR_OPEN_DATE()));
-		mockData.add(DataValidation.alignSize(getQMPA_ENROLL_CHNL_SWITCH()));
-		mockData.add(DataValidation.alignSize(getQMPA_MTD()));
-		mockData.add(DataValidation.alignSize(getFILLER_REDEFINES_QMPA_MTD()));
-		mockData.add(DataValidation.alignSize(getQMPA_MTD_PTS_EARNED()));
-		mockData.add(DataValidation.alignSize(getQMPA_MTD_PTS_BOUGHT()));
-		mockData.add(DataValidation.alignSize(getQMPA_MTD_PTS_BONUS()));
-		mockData.add(DataValidation.alignSize(getQMPA_MTD_PTS_REDEEMED()));
-		mockData.add(DataValidation.alignSize(getQMPA_MTD_PTS_CLOSED()));
-		mockData.add(DataValidation.alignSize(getQMPA_MTD_PTS_EXPIRED()));
-		mockData.add(DataValidation.alignSize(getQMPA_MTD_PTS_ADJUST_IN()));
-		mockData.add(DataValidation.alignSize(getQMPA_MTD_PTS_ADJUST_OUT()));
-		mockData.add(DataValidation.alignSize(getQMPA_CLEAR_MTD_FLAG()));
-		mockData.add(DataValidation.alignSize(getQMPA_CLEAR_YTD_FLAG()));
-		mockData.add(DataValidation.alignSize(getQMPA_NEXT_ANNIV_DATE()));
-		mockData.add(DataValidation.alignSize(getQMPA_TODAY_HH_ACTIVITY()));
-		mockData.add(DataValidation.alignSize(getQMPA_LTD_PTS_TOTAL()));
-		mockData.add(DataValidation.alignSize(getQMPA_LMS_FIRST_USAGE_SWITCH()));
-		mockData.add(DataValidation.alignSize(getQMPA_HI_XFR_STATUS()));
-		mockData.add(DataValidation.alignSize(getQMPA_HI_XFR_OUT_DATE()));
-		mockData.add(DataValidation.alignSize(getQMPA_HI_HSBC_AREA()));
-		mockData.add(DataValidation.alignSize(getQMPA_HI_GLOBAL_AREA_1()));
-		mockData.add(DataValidation.alignSize(getQMPA_FEE_FLAG()));
-		mockData.add(DataValidation.alignSize(getQMPA_GLBL_SEC_WI_MEMB_FLAG()));
-		mockData.add(DataValidation.alignSize(getQMPA_GLBL_AUT_WI_MEMB_FLAG()));
-		mockData.add(DataValidation.alignSize(getQMPA_GLBL_ROLLED_MEM_FEE_AMT()));
-		mockData.add(DataValidation.alignSize(getQMPA_GLBL_SEC_CARD_COUNT()));
-		mockData.add(DataValidation.alignSize(getQMPA_GLBL_AUTH_CARD_COUNT()));
-		mockData.add(DataValidation.alignSize(getQMPA_GLBL_MEMB_ID()));
-		mockData.add(DataValidation.alignSize(getQMPA_GLBL_DISB_POINTS()));
-		mockData.add(DataValidation.alignSize(getQMPA_HI_MAX_DISB_THRESHOLD()));
-		mockData.add(DataValidation.alignSize(getQMPA_GLBL_AUTO_DISB_PROD()));
-		mockData.add(DataValidation.alignSize(getQMPA_HI_AUTO_DISB_PNTS_FWD()));
-		mockData.add(DataValidation.alignSize(getQMPA_HI_CLEAR_AD_FLAG()));
-		mockData.add(DataValidation.alignSize(getFILLER()));
-		mockData.add(DataValidation.alignSize(getQMPA_HI_DE_ENROLL_CHANNEL()));
-		mockData.add(DataValidation.alignSize(getQMPA_HI_TYPE_OF_DISBURSE_IND()));
-		mockData.add(DataValidation.alignSize(getQMPA_HI_PROC_REDEMPTION_IND()));
-		mockData.add(DataValidation.alignSize(getQMPA_HI_GLOBAL_FILLER_1()));
-		mockData.add(DataValidation.alignSize(getQMPA_HI_REGIONAL_AREA_1()));
-		mockData.add(DataValidation.alignSize(getQMPA_HI_REGIONAL_FILLER_1()));
-		mockData.add(DataValidation.alignSize(getQMPA_HI_BUS_UNIT_AREA_1()));
-		mockData.add(DataValidation.alignSize(getQMPA_HI_BUS_UNIT_FILLER_1()));
+		mockData.add(getQMPA_RECORD());
+		mockData.add(getQMPA_KEY());
+		mockData.add(getQMPA_KEY_ORG_ACCT());
+		mockData.add(getQMPA_ORG());
+		mockData.add(getQMPA_ACCT());
+		mockData.add(getQMPA_SCHEME_ID());
+		mockData.add(getQMPA_ADD_STATUS());
+		mockData.add(getQMPA_INT_STATUS());
+		mockData.add(getQMPA_LAST_MAINT_OPER());
+		mockData.add(getQMPA_LAST_MAINT_DATE());
+		mockData.add(getQMPA_SERVICE_FLAG());
+		mockData.add(getQMPA_AUTO_DISB_FLAG());	
+		mockData.add(getQMPA_AUTO_DISB_LAST_DATE());
+		mockData.add(getQMPA_AUTO_DISB_ACCT());
+		mockData.add(getQMPA_BLOCK_CODE_1());
+		mockData.add(getQMPA_ROLLUP_LAST_DATE());
+		mockData.add(getQMPA_OUTSTANDING_REDEMPTION());
+		mockData.add(getQMPA_ACTV_LAST_DATE());
+		mockData.add(getQMPA_ACTV_NEXT_DATE());
+		mockData.add(getQMPA_CTD());
+		mockData.add(getFILLER_REDEFINES_QMPA_CTD());
+		mockData.add(getQMPA_CTD_PTS_EARNED());
+		mockData.add(getQMPA_CTD_PTS_BOUGHT());
+		mockData.add(getQMPA_CTD_PTS_BONUS());
+		mockData.add(getQMPA_CTD_PTS_REDEEMED());
+		mockData.add(getQMPA_CTD_PTS_CLOSED());
+		mockData.add(getQMPA_CTD_PTS_EXPIRED());
+		mockData.add(getQMPA_CTD_PTS_ADJUST_IN());
+		mockData.add(getQMPA_CTD_PTS_ADJUST_OUT());
+		mockData.add(getQMPA_CLEAR_CTD_FLAG());
+		mockData.add(getQMPA_CTD_SPEND_EARNED());
+		mockData.add(getQMPA_LTD());
+		mockData.add(getFILLER_REDEFINES_QMPA_LTD());
+		mockData.add(getQMPA_LTD_PTS_EARNED());
+		mockData.add(getQMPA_LTD_PTS_BOUGHT());
+		mockData.add(getQMPA_LTD_PTS_BONUS());
+		mockData.add(getQMPA_LTD_PTS_REDEEMED());
+		mockData.add(getQMPA_LTD_PTS_CLOSED());
+		mockData.add(getQMPA_LTD_PTS_EXPIRED());
+		mockData.add(getQMPA_LTD_PTS_ADJUST_IN());
+		mockData.add(getQMPA_LTD_PTS_ADJUST_OUT());
+		mockData.add(getQMPA_YTD_SPEND_EARNED());
+		mockData.add(getQMPA_LTD_PTS_DISBURSED());
+		mockData.add(getQMPA_STMT_DTLS());
+		mockData.add(getQMPA_STMT_MONTH_FREQ());
+		mockData.add(getQMPA_STMT_DAY_OF_MONTH());
+		mockData.add(getQMPA_LAST_STMT_DATE());
+		mockData.add(getQMPA_NEXT_STMT_DATE());
+		mockData.add(getQMPA_DATE_OPENED());
+		mockData.add(getQMPA_DATE_LAST_ACTIVE());
+		mockData.add(getQMPA_FIRST_USAGE_SWITCH());
+		mockData.add(getQMPA_ACCT_OPEN_SWITCH());
+		mockData.add(getQMPA_BLOCK_CODE_MODE());
+		mockData.add(getQMPA_DELINQUENCY_MODE());
+		mockData.add(getQMPA_DISBURSE_PACKET_POINTS());
+		mockData.add(getQMPA_AUTO_DISB_FREQ());
+		mockData.add(getQMPA_AUTO_DISB_DAY_OF_MONTH());
+		mockData.add(getQMPA_AUTO_DISB_IND());
+		mockData.add(getQMPA_PREV_STMT_MONTH_FREQ());
+		mockData.add(getQMPA_AUTO_DISB_DBA_NAME());
+		mockData.add(getQMPA_STATUS_CHANGE_DATE());
+		mockData.add(getQMPA_START_DISBURSE_DATE());
+		mockData.add(getQMPA_REWARDS_CATEGORY());
+		mockData.add(getQMPA_AUTO_DISB_THRESHOLD());
+		mockData.add(getQMPA_ENROLLMENT_CHANNEL());
+		mockData.add(getQMPA_PURGE_DATE());
+		mockData.add(getQMPA_WAIVE_MEMB_FEE());
+		mockData.add(getQMPA_DEFER_MEMB_FEE_DTE());
+		mockData.add(getQMPA_NEXT_MEMB_FEE_DTE());
+		mockData.add(getQMPA_NEXT_MEMB_FEE_AMT());
+		mockData.add(getQMPA_REDMPT_CHNL_CT());
+		mockData.add(getQMPA_AR_OPEN_DATE());
+		mockData.add(getQMPA_ENROLL_CHNL_SWITCH());
+		mockData.add(getQMPA_MTD());
+		mockData.add(getFILLER_REDEFINES_QMPA_MTD());
+		mockData.add(getQMPA_MTD_PTS_EARNED());
+		mockData.add(getQMPA_MTD_PTS_BOUGHT());
+		mockData.add(getQMPA_MTD_PTS_BONUS());
+		mockData.add(getQMPA_MTD_PTS_REDEEMED());
+		mockData.add(getQMPA_MTD_PTS_CLOSED());
+		mockData.add(getQMPA_MTD_PTS_EXPIRED());
+		mockData.add(getQMPA_MTD_PTS_ADJUST_IN());
+		mockData.add(getQMPA_MTD_PTS_ADJUST_OUT());
+		mockData.add(getQMPA_CLEAR_MTD_FLAG());
+		mockData.add(getQMPA_CLEAR_YTD_FLAG());
+		mockData.add(getQMPA_NEXT_ANNIV_DATE());
+		mockData.add(getQMPA_TODAY_HH_ACTIVITY());
+		mockData.add(getQMPA_LTD_PTS_TOTAL());
+		mockData.add(getQMPA_LMS_FIRST_USAGE_SWITCH());
+		mockData.add(getQMPA_HI_XFR_STATUS());
+		mockData.add(getQMPA_HI_XFR_OUT_DATE());
+		mockData.add(getQMPA_HI_HSBC_AREA());
+		mockData.add(getQMPA_HI_GLOBAL_AREA_1());
+		mockData.add(getQMPA_FEE_FLAG());
+		mockData.add(getQMPA_GLBL_SEC_WI_MEMB_FLAG());
+		mockData.add(getQMPA_GLBL_AUT_WI_MEMB_FLAG());
+		mockData.add(getQMPA_GLBL_ROLLED_MEM_FEE_AMT());
+		mockData.add(getQMPA_GLBL_SEC_CARD_COUNT());
+		mockData.add(getQMPA_GLBL_AUTH_CARD_COUNT());
+		mockData.add(getQMPA_GLBL_MEMB_ID());
+		mockData.add(getQMPA_GLBL_DISB_POINTS());
+		mockData.add(getQMPA_HI_MAX_DISB_THRESHOLD());
+		mockData.add(getQMPA_GLBL_AUTO_DISB_PROD());
+		mockData.add(getQMPA_HI_AUTO_DISB_PNTS_FWD());
+		mockData.add(getQMPA_HI_CLEAR_AD_FLAG());
+		mockData.add(getFILLER());
+		mockData.add(getQMPA_HI_DE_ENROLL_CHANNEL());
+		mockData.add(getQMPA_HI_TYPE_OF_DISBURSE_IND());
+		mockData.add(getQMPA_HI_PROC_REDEMPTION_IND());
+		mockData.add(getQMPA_HI_GLOBAL_FILLER_1());
+		mockData.add(getQMPA_HI_REGIONAL_AREA_1());
+		mockData.add(getQMPA_HI_REGIONAL_FILLER_1());
+		mockData.add(getQMPA_HI_BUS_UNIT_AREA_1());
+		mockData.add(getQMPA_HI_BUS_UNIT_FILLER_1());
 		
 		
 		return mockData;
 	}
 	
-	public QMPAModelToCreate(String string) {
+	public QMPAModelToCreateOriginal(String string) {
 	
 			setQMPA_RECORD(newId());
 			setQMPA_KEY(newId());
@@ -147,7 +146,7 @@ public class QMPAModelToCreate {
 			setQMPA_AUTO_DISB_ACCT(newId());
 			setQMPA_BLOCK_CODE_1(newId());
 			setQMPA_ROLLUP_LAST_DATE(newId());
-			setQMPA_OUTSTANDING_REDEMPTION(newId());
+			setQMPA_OUTSTANDING_REDEMPTION(generateRandomNumber());
 			setQMPA_ACTV_LAST_DATE(newId());
 			setQMPA_ACTV_NEXT_DATE(newId());
 			setQMPA_CTD(newId());
@@ -247,6 +246,8 @@ public class QMPAModelToCreate {
 		    setQMPA_HI_BUS_UNIT_FILLER_1(newId());
 		    
 	}
+	
+	private static final String EMPTY_STRING = "";
 	
 	//QMPA data
 	private String QMPA_RECORD;
@@ -365,18 +366,23 @@ public class QMPAModelToCreate {
 	private String QMPA_HI_BUS_UNIT_FILLER_1;
 		
 
-		// to generate new id
+		// to generate random id
 		public static String newId() {
 			UUID uuid = UUID.randomUUID();
 			return uuid.toString();
 		}
 		
+		public static String nullStr() {
+			
+			return EMPTY_STRING;
+		}
+		
 		public String generateRandomNumber(){
 			 
-					
 			Integer number =(int) (1+(Math.random()*(1001-2)+1));
 					return number.toString();
 		}
+		
 		public static String generateDateWithLowerUpperBound(int maxYear, int minYear){
 
 			return String.valueOf((int)(1+((Math.random()*(12-2)+1))))+"/"+String.valueOf((int)(1+((Math.random()*(30-2)+1))))+"/"+String.valueOf((int)(minYear+((Math.random())*((maxYear-minYear)+1))));
@@ -1301,5 +1307,3 @@ public class QMPAModelToCreate {
 	
 	
 }
-
-

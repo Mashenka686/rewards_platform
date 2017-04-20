@@ -208,4 +208,18 @@ public class DataValidation {
 		}
 		return false;
 	}
+	
+	public static  String alignSize(String string){
+		
+		if(string.length()<44){
+			for(int i=string.length(); i<=44; i++){
+				string=string+" ";
+			}
+		}
+		return string;
+	}
+	public static void main(String[] args) {
+		System.out.println(alignSize("cat")+"after cat");
+		System.out.println(alignSize("Flowers")+"after cat");
+	}
 }
