@@ -222,4 +222,17 @@ public class DataValidation {
 		System.out.println(alignSize("cat")+"after cat");
 		System.out.println(alignSize("Flowers")+"after cat");
 	}
+	
+	public static int checkForNullValues(List<String> s){
+		int countNull=0;
+		for(int i=0; i<s.size(); i++){
+			
+			if(s.get(i).isEmpty()){
+				System.out.println("Null value row number:"+i);
+				countNull++;
+				
+			}
+		}
+		return countNull;
+	}
 }

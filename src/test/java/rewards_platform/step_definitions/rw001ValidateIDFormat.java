@@ -69,4 +69,16 @@ public class rw001ValidateIDFormat {
 	    
 	    assertFalse(DataValidation.isDuplicate(lms));
 	}
+	
+	@Then("^lms_id should not contain null$")
+	public void lms_id_should_not_contain_null() throws Throwable {
+	    List<String> lms = new ArrayList<String>();
+	    for(int i=0; i<data.size(); i++){
+	    	lms.add(data.get(i).getLms_id());
+	    	System.out.println(lms.get(i));
+	    }
+	  System.out.println("Null count: "+DataValidation.checkForNullValues(lms));
+	   // assertTrue(DataValidation.checkForNullValues(lms)==0);
+	    
+	}
 }
